@@ -154,23 +154,39 @@
         }
     </style>
 
+</section>
 <body>
-    <button class="open-pdf-button" onclick="openPDF()">View More Products</button>
+<style>
+    .pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
 
-  <div>
-        <iframe id="pdfIframe" class="pdf" src="https://drive.google.com/file/d/1qRdktgcfl3MsrBzlJjJlE3IqHyVTLCg3/view?usp=sharing"></iframe>
-    </div>
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+   h1,
+    h3 {
+        text-align: center;
+    }
 
-    <script src="script.js"></script>
+    h1 {
+        color: green;
+    }
+</style>
+
+<body>
+        <embed class="pdf" 
+               src=
+"https://drive.google.com/file/d/1qRdktgcfl3MsrBzlJjJlE3IqHyVTLCg3/view?usp=sharing"
+            width="800" height="500">
+</body>
 </body>
 
-
-
-
-</section>
-
-      </div>
-    </section>
 
     <section class="about">
       <div class="container">
