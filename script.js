@@ -2,12 +2,14 @@
 document.addEventListener('DOMContentLoaded', function() {
   emailjs.init('jj1eHDfiYgA1B0JEb');
 
-function openPDF() {
-    const pdfUrl = 'https://drive.google.com/uc?export=download&id=1qRdktgcfl3MsrBzlJjJlE3IqHyVTLCg3';
-    console.log('Loading PDF:', pdfUrl);
-    document.getElementById('pdfIframe').src = pdfUrl;
-}
-
+document.getElementById('open-pdf-btn').addEventListener('click', function() {
+    const fileId = '1qRdktgcfl3MsrBzlJjJlE3IqHyVTLCg3';
+    const iframe = document.getElementById('pdf-frame');
+    iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+    
+    const container = document.getElementById('pdf-container');
+    container.style.display = 'block';
+});
 
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();

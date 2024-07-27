@@ -155,40 +155,15 @@
     </style>
 
 </section>
-<body>
-<style>
-    .pdf {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-    }
-
-    .pdf,
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-   h1,
-    h3 {
-        text-align: center;
-    }
-
-    h1 {
-        color: green;
-    }
-</style>
-
 
 <body>
-    <button class="open-pdf-button" onclick="openPDF()">View More Products</button>
+    <button id="open-pdf-btn">Open PDF</button>
+    
+    <div id="pdf-container">
+        <iframe id="pdf-frame" frameborder="0"></iframe>
+    </div>
 
-    <div embed class="pdf" src=
-"https://drive.google.com/file/d/1qRdktgcfl3MsrBzlJjJlE3IqHyVTLCg3/view?usp=sharing"
-            width="800" height="500">
-        </div>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 
 
