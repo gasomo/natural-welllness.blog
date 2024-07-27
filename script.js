@@ -1,9 +1,13 @@
 // Add your JavaScript here
 document.addEventListener('DOMContentLoaded', function() {
   emailjs.init('jj1eHDfiYgA1B0JEb');
+
 function openPDF() {
-    document.getElementById('pdfIframe').src = 'https://raw.githubusercontent.com/gasomo/natural-welllness.blog/main/Foligray.pdf';
+    const pdfUrl = 'https://raw.githubusercontent.com/gasomo/natural-welllness.blog/main/Foligray.pdf';
+    console.log('Loading PDF:', pdfUrl);
+    document.getElementById('pdfIframe').src = pdfUrl;
 }
+
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
