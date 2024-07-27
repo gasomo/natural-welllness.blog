@@ -1,7 +1,9 @@
 // Add your JavaScript here
 document.addEventListener('DOMContentLoaded', function() {
   emailjs.init('jj1eHDfiYgA1B0JEb');
-
+function openPDF() {
+    document.getElementById('pdfIframe').src = 'https://raw.githubusercontent.com/gasomo/natural-welllness.blog/main/Foligray.pdf';
+}
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
