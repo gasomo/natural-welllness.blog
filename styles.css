@@ -164,4 +164,8 @@ footer {
     50% { opacity: 0.5; }
     100% { opacity: 1; }
 }
+.hit-counter {
+  text-align: center;
+  padding: 40px 0;
+}
 
