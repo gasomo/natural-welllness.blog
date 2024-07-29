@@ -188,4 +188,35 @@ footer {
     color: black; /* Black text on hover */
     border: 2px solid #4CAF50; /* Add a border on hover */
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Ensures no scrollbars */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Background color outside the oval */
+}
+
+.oval-container {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Background color of the oval */
+    border-radius: 50%; /* Creates the oval shape */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for better visibility */
+    padding: 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+    text-align: center; /* Centers text inside the oval */
+    overflow: auto; /* Allows for scroll if content overflows */
+    position: relative; /* Ensures content aligns properly */
+}
+
+h1, p {
+    margin: 0;
+}
 
