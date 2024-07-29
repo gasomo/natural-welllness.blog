@@ -22,23 +22,3 @@ document.getElementById('open-pdf-btn').addEventListener('click', function() {
       });
   });
 });
-.oval-button {
-    background-color: #4CAF50; /* Green background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 15px 32px; /* Some padding */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Get the element to line up nicely */
-    font-size: 16px; /* Increase font size */
-    margin: 4px 2px; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border-radius: 50px; /* Rounded corners */
-    transition-duration: 0.4s; /* 0.4 second transition effect to hover state */
-}
-
-.oval-button:hover {
-    background-color: white; /* Green background on hover */
-    color: black; /* Black text on hover */
-    border: 2px solid #4CAF50; /* Add a border on hover */
-}
