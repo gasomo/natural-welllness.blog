@@ -60,6 +60,45 @@
         <p>Your one-stop shop for the best mineral and vitamin supplements.</p>
       </div>
     </section>
+
+  <!-- code foe the table -->
+      <title>Ad Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .ad-table {
+            width: 100%;
+            border-collapse: collapse;
+            animation: blink-border 1s infinite;
+        }
+
+        .ad-table td {
+            border: 2px solid #FF5733;
+            padding: 20px;
+            text-align: center;
+            animation: blink-cell 1.5s infinite;
+        }
+
+        @keyframes blink-border {
+            0%, 100% {
+                border-color: #FF5733;
+            }
+            50% {
+                border-color: #FFC300;
+            }
+        }
+
+        @keyframes blink-cell {
+            0%, 100% {
+                background-color: #FFC300;
+            }
+            50% {
+                background-color: #FF5733;
+            }
+        }
+    </style>
     <table class="ad-table">
     <tr>
         <td>
