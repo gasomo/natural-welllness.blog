@@ -190,21 +190,3 @@ footer {
 }
 /* Add your custom styles here */
 
-.container {
-  width: 80%;
-  margin: auto;
-}
-
-.header, .hero, .products, .about, .blog, .contact-section, .hit-counter {
-  padding: 20px 0;
-}
-
-.header h1, .products h1, .about h2, .blog h2, .contact-section h2, .hit-counter h2 {
-  text-align: center;
-}
-
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
