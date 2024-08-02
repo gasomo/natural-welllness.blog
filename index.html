@@ -4,77 +4,175 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
   <title>Natural Wellness Supplements</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js" defer></script>
- <style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .title-bar {
+      background-color: #2C3E50;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .title-bar h1 {
+      margin: 0;
+      font-size: 24px;
+      text-align: center;
+      flex: 1;
+    }
     .social-icons {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      margin-left: auto;
+      display: flex;
+      gap: 10px;
     }
-
     .social-icons a {
-      margin: 0 10px;
+      color: white;
       text-decoration: none;
+      font-size: 18px;
     }
-
-    .social-icons img {
-      width: 24px;
-      height: 24px;
+    .social-icons a:hover {
+      color: #ecf0f1;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #1ABC9C;
+      color: white;
+    }
+    .hero h2 {
+      margin: 0 0 20px;
+      font-size: 32px;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 18px;
+    }
+    .products h1 {
+      text-align: center;
+      color: #16A085;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      width: calc(33.333% - 40px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
     }
-
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-   
- 3px rgba(0, 0, 0, 0.1);
-    }
-    th, td {
-      padding: 15px;
-      text-align: center;
-    }
-    th {
-      background-color: #4CAF50;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    tr:nth-child(odd) {
-      background-color: #e9f7ef;
-    }
-    td {
-      border: 1px solid #ddd;
-    }
-    tr:hover {
-      background-color: #ddd;
-    }
-    .header-row {
-      background-color: #4CAF50;
-      color: white;
-    }
-    .content-row:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-    .content-row:nth-child(odd) {
-      background-color: #e6f5e9;
-    }
-    .content-row:hover {
-      background-color: #d1e7d7;
-    }
-    img {
-      max-width: 100px;
+    .product-card img {
+      max-width: 100%;
       height: auto;
     }
-  </style>
-</head>
-   
-    .open-pdf-btn {
-      background-color: #5DADE2;
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+      color: #2980B9;
+    }
+    .product-card p {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #7F8C8D;
+    }
+    .product-card a {
+      text-decoration: none;
+      color: white;
+      background-color: #E74C3C;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .product-card a:hover {
+      background-color: #C0392B;
+    }
+  .about, .blog, .contact-section, .hit-counter {
+      margin: 40px 0;
+    }
+    .blog-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .blog-post {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .blog-post h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #2980B9;
+    }
+    .blog-post p {
+      margin: 0;
+      font-size: 16px;
+      color: #7F8C8D;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #34495E;
+    }
+    .form-group input, .form-group textarea {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #E74C3C;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .contact-form button:hover {
+      background-color: #C0392B;
+    }
+    .oval-button {
+      background-color: #2980B9;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -84,22 +182,37 @@
       font-size: 16px;
       transition: background-color 0.3s;
     }
-
-    .open-pdf-btn:hover {
-      background-color: #5491B2;
+    .oval-button:hover {
+      background-color: #1F618D;
+    }
+    #pdf-container {
+      margin-top: 20px;
+    }
+    #pdf-frame {
+      width: 100%;
+      height: 600px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #2C3E50;
+      color: white;
     }
   </style>
+</head>
+<body>
 
-
-    <header>
-  <div class="container">
-    <div class="social-icons">
-      <a href="https://ibb.co/wzM8N0y"><img src="https://i.ibb.co/0Gh1jDq/pinterest.png" alt="pinterest" border="0"></a>
-      <a href="https://ibb.co/8X0fxn0"><img src="https://i.ibb.co/yVXZkmX/facebook.png" alt="facebook" border="0"></a>
-      <a href="https://ibb.co/47Vc8bc"><img src="https://i.ibb.co/yXQD6zD/instagram.jpg" alt="instagram" border="0"></a>
+  <header>
+    <div class="title-bar">
+      <h1>Natural Wellness Supplements</h1>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
    
  
   <main>
@@ -109,9 +222,23 @@
         <p>Your one-stop shop for the best mineral and vitamin supplements.</p>
       </div>
     </section>
+   <!-- Advertisement Banners Section -->
+<section class="ads-banner">
+  <div class="container">
+    <div class="ads-banner-inner">
+ 
 
-           <!--table -->
+<a href='https://htm121.com/track.php?lid=752463&rid=91437&aid=7057613' target='_blank' rel='nofollow'><img src='http://htm121.com/getimage.php?rid=91437&aid=7057613&did=62' width='728' height='90' ></a>
 
+<a href='https://htm261.com/track.php?lid=766844&rid=839147&aid=7057613' target='_blank' rel='nofollow'><img src='http://htm261.com/getimage.php?rid=839147&aid=7057613&did=395' width='320' height='100' ></a>
+    </div>
+  </div>
+</section>
+
+
+
+    
+  
     <section class="products">
       <div class="container">
         
@@ -247,43 +374,82 @@
         <div class="blog-posts">
           <!-- Blog Post 1 -->
           <div class="blog-post">
-            <h3><a href="https://tinyurl.com/2refhsfv" target="_blank">Unlock the Benefits of Conjugated Linoleic Acid (CLA): A Comprehensive Guide to CLA for Optimal Health</a></h3>
+            <h2><a href="https://tinyurl.com/2refhsfv" target="_blank">Unlock the Benefits of Conjugated Linoleic Acid (CLA): A Comprehensive Guide to CLA for Optimal Health</a></h2>
             <p>Everything You Need to Know About CLA: Benefits, Sources, and How It Supports Your Health.</p>
           </div>
           <!-- Blog Post 2 -->
           <div class="blog-post">
-            <h3><a href="https://tinyurl.com/3xbh3x7x" target="_blank">The 3 Best Multivitamins for Men That Work</a></h3>
+            <h2><a href="https://tinyurl.com/3xbh3x7x" target="_blank">The 3 Best Multivitamins for Men That Work</a></h2>
             <p>Top Multivitamins for Men: Expert Picks and Benefits.</p>
           </div>
            <div class="blog-post">
-            <h3><a href="https://tinyurl.com/3wcppr7r" target="_blank">Prostate Cancer: A Leading Threat to Men’s Health</a></h3>
+            <h2><a href="https://tinyurl.com/3wcppr7r" target="_blank">Prostate Cancer: A Leading Threat to Men’s Health</a></h2>
             <p>Top 5 Prostate Cancer Prevention Hacks Every Man Should Know.</p>
           </div>
           <div class="blog-post">
-            <h3><a href="https://tinyurl.com/bvvnek5r" target="_blank">The Tennis Partner by Abraham Verghese</a></h3>
+            <h2><a href="https://tinyurl.com/bvvnek5r" target="_blank">The Tennis Partner by Abraham Verghese</a></h2>
             <p>A Doctor’s Story of Friendship and Loss.</p>
           </div>
             <div class="blog-post">
-            <h3><a href="https://tinyurl.com/4jyesubj" target="_blank">"Atomic Habits" by James Clear</a></h3>
+            <h2><a href="https://tinyurl.com/4jyesubj" target="_blank">"Atomic Habits" by James Clear</a></h2>
             <p>An Easy & Proven Way to Build Good Habits & Break Bad Ones.</p>
           </div>
              <div class="blog-post">
-            <h3><a href="https://tinyurl.com/3whfn2ry" target="_blank">"The Mountain Is You: Transforming Self-Sabotage into Self-Mastery” by Brianna Wiest, Stacey Glemboski, et al.</a></h3>
+            <h2><a href="https://tinyurl.com/3whfn2ry" target="_blank">"The Mountain Is You: Transforming Self-Sabotage into Self-Mastery” by Brianna Wiest, Stacey Glemboski, et al.</a></h2>
             <p>Transforming Self-Sabotage into Self-Mastery.</p>
           </div>
            <div class="blog-post">
-            <h3><a href="https://tinyurl.com/4eap2zer" target="_blank">“Mating in Captivity”, a Book by Esther Perel</a></h3>
+            <h2><a href="https://tinyurl.com/4eap2zer" target="_blank">“Mating in Captivity”, a Book by Esther Perel</a></h2>
             <p>Unlocking Erotic Intelligence.</p>
                   <div class="blog-post">
-            <h3><a href="https://tinyurl.com/328jbezv" target="_blank">How to Lose Weight: A Comprehensive Guide</a></h3>
+            <h2><a href="https://tinyurl.com/328jbezv" target="_blank">How to Lose Weight: A Comprehensive Guide</a></h2>
             <p>Embracing Nature’s Care and Wellness for Effective Weight Loss.</p>
           </div>
         </div>
       </div>
     </section>
-   
-   
- 
+   <!-- Ads --->
+      <section class="ads-section">
+  <table class="ads-table">
+    <tr>
+      <td>
+        <a href='https://htm211.com/track.php?lid=822667&rid=822634&aid=7057613' target='_blank' rel='nofollow'>
+          <img src='http://htm211.com/getimage.php?rid=822634&aid=7057613&did=465' width='244' height='76' alt='Ad 1'>
+        </a>
+      </td>
+      <td>
+        <a href='https://htm101.com/track.php?lid=807982&rid=807417&aid=7057613' target='_blank' rel='nofollow'>
+          <img src='http://htm101.com/getimage.php?rid=807417&aid=7057613&did=422' width='282' height='117' alt='Ad 2'>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href='https://htm293.com/track.php?lid=825101&rid=824990&aid=7057613' target='_blank' rel='nofollow'>
+          <img src='http://htm293.com/getimage.php?rid=824990&aid=7057613&did=472' width='413' height='248' alt='Ad 3'>
+        </a>
+      </td>
+      <td>
+        <a href='https://htm293.com/track.php?lid=825167&rid=825158&aid=7057613' target='_blank' rel='nofollow'>
+          <img src='http://htm293.com/getimage.php?rid=825158&aid=7057613&did=475' width='466' height='329' alt='Ad 4'>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href='https://htm293.com/track.php?lid=832740&rid=832732&aid=7057613' target='_blank' rel='nofollow'>
+          <img src='http://htm293.com/getimage.php?rid=832732&aid=7057613&did=476' width='219' height='191' alt='Ad 5'>
+        </a>
+      </td>
+      <td>
+        <a href='https://htm101.com/track.php?lid=822490&rid=822494&aid=7057613' target='_blank' rel='nofollow'>
+          <img src='http://htm101.com/getimage.php?rid=822494&aid=7057613&did=462' width='417' height='234' alt='Ad 6'>
+        </a>
+      </td>
+    </tr>
+  </table>
+</section>
+
         <!-- Contact Us Section -->
     <section id="contact" class="contact-section">
       <div class="container">
