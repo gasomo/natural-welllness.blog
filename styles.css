@@ -190,3 +190,87 @@ footer {
 }
 /* Add your custom styles here */
 
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.header, .hero, .products, .about, .blog, .contact-section, .hit-counter {
+  padding: 20px 0;
+}
+
+.header h1, .products h1, .about h2, .blog h2, .contact-section h2, .hit-counter h2 {
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ads-section {
+  background-color: #f8f9fa; /* Light grey background for the section */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+.ads-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders to remove spacing between cells */
+  background: linear-gradient(135deg, #f0f8ff, #e6e6fa); /* Attractive gradient background */
+}
+
+.ads-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd; /* Light grey border for cells */
+}
+
+.ads-table img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s;
+}
+
+.ads-table img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.ads-table {
+  border: 1px solid #ddd; /* Light grey border around the table */
+}
+
+.ads-banner {
+  background-color: #f8f9fa; /* Light grey background for the banner section */
+  padding: 20px;
+  border-bottom: 2px solid #ddd; /* Light grey border at the bottom */
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+.ads-banner-inner {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+  justify-content: space-around; /* Distribute space evenly */
+}
+
+.ads-banner-inner a {
+  display: block;
+  margin: 0 10px; /* Add horizontal spacing between banners */
+}
+
+.ads-banner-inner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s;
+}
+
+.ads-banner-inner img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
