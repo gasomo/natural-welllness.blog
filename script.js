@@ -70,4 +70,30 @@ function updateSlider(value) {
 }
 
 });
+// Toggle info box on hover
+function showInfo(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function hideInfo(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+// Toggle info box on click
+function toggleInfo(id) {
+  const element = document.getElementById(id);
+  if (element.style.display === 'block') {
+    element.style.display = 'none';
+  } else {
+    element.style.display = 'block';
+  }
+}
+
+function updateSlider(value) {
+  const naturalPercentage = value;
+  const syntheticPercentage = 100 - value;
+  document.getElementById('slider-value').textContent = `${naturalPercentage}% Natural / ${syntheticPercentage}% Synthetic`;
+}
+
+});
 
