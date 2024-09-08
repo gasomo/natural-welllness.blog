@@ -274,3 +274,133 @@ footer {
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.infographic {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2d6a4f;
+}
+
+h2 i {
+  margin-right: 10px;
+}
+
+.infographic-section {
+  margin-bottom: 40px;
+}
+
+.info-box {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.natural {
+  background-color: #d4edda;
+}
+
+.synthetic {
+  background-color: #f8d7da;
+}
+
+.info-box:hover {
+  background-color: #cce5ff;
+}
+
+.hidden-info {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Image Styling */
+.visual-img {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* Comparison Slider */
+.comparison-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+input[type="range"] {
+  width: 60%;
+  margin: 0 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2d6a4f; /* Green for natural feel */
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2d6a4f;
+  cursor: pointer;
+}
+
+.slider-text {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 10px;
+  font-size: 1.2em;
+  color: #2d6a4f;
+}
+
+#slider-value {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+input[type="range"] {
+  width: 60%;
+  margin: 0 10px;
+}
+
+.slider-text span {
+  font-size: 1.2em;
+}
+
